@@ -2,7 +2,7 @@ setOldClass(c("niftiImage", "internalImage"))
 
 .convertNiftiImage <- function (from)
 {
-    metadata <- RNifti::dumpNifti(from)
+    metadata <- RNifti::niftiHeader(from)
     defaults <- list(dim_info=0, intent_p1=0, intent_p2=0, intent_p3=0, intent_code=0, intent_name="", slice_start=0, slice_end=0, slice_code=0, cal_min=0, cal_max=0, slice_duration=0, toffset=0, aux_file="")
     
     tags <- list()
